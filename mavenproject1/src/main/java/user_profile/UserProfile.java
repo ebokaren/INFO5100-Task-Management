@@ -80,6 +80,12 @@ public class UserProfile extends javax.swing.JFrame {
             }
         });
 
+        txtPhoneNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPhoneNumberActionPerformed(evt);
+            }
+        });
+
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -234,7 +240,7 @@ public class UserProfile extends javax.swing.JFrame {
 
 //            String message = "Hi! Your Name is "+firstName+" "+lastName+", and you are "+age+" years old! Email: " +email+ " and Phone Number :" +phoneNumber+ "";
             String message = "Hi! Your Name is "+user.getFirstName()+" "+user.getLastName()+", and you are "+user.getAge()+" years old! Email: " +user.getEmail()+ " and Phone Number :" +user.getPhoneNumber()+ "";
-            JOptionPane.showMessageDialog(this, imgLabel, "User Created!", JOptionPane.ERROR_MESSAGE, user.getPic());
+            JOptionPane.showMessageDialog(this, message, "User Created!", JOptionPane.ERROR_MESSAGE, user.getPic());
 
             //        String message = "Hi! Your Name is "+user.getFirstName()+" "+user.getLastName()+", and you are "+user.getAge()+" years old!";
             //        JOptionPane.showMessageDialog(this, message);
@@ -253,6 +259,10 @@ public class UserProfile extends javax.swing.JFrame {
     private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAgeActionPerformed
+
+    private void txtPhoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhoneNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPhoneNumberActionPerformed
 
     /**
      * @param args the command line arguments
