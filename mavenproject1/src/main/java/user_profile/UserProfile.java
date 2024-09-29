@@ -211,7 +211,7 @@ public class UserProfile extends javax.swing.JFrame {
                 }
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Please upload "
-                    + "image correctly.", "Error - Incorrectimage", JOptionPane.ERROR_MESSAGE);
+                    + "image correctly.", "Error - Incorrect Image", JOptionPane.ERROR_MESSAGE);
                         ex.printStackTrace();
             }
         }
