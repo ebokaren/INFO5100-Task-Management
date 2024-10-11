@@ -15,7 +15,7 @@ public class User {
     private String firstName;
     private String lastName; 
     private ImageIcon pic;
-    private double age;
+    private double age; 
     private String email;
     private String gender;
     private String scTextArea;
