@@ -4,6 +4,8 @@
  */
 package views;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author eboka
@@ -17,6 +19,7 @@ public class LoginView extends javax.swing.JFrame {
         initComponents();
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,9 +36,21 @@ public class LoginView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(45, 118, 232));
+
         btnUserLogin.setText("Login as User");
+        btnUserLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUserLoginActionPerformed(evt);
+            }
+        });
 
         btnAdminLogin.setText("Login as Admin");
+        btnAdminLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdminLoginActionPerformed(evt);
+            }
+        });
 
         lblLoginView.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         lblLoginView.setText("Select Login Method");
@@ -83,6 +98,45 @@ public class LoginView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnUserLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserLoginActionPerformed
+        // TODO add your handling code here:
+//        this.dispose(); 
+//        
+//         views.MainFrameUserView mainFrameUserView = new views.MainFrameUserView();
+//         mainFrameUserView.setVisible(true);  
+
+            this.dispose(); 
+
+    // Create a new JFrame to hold the MainFrameUserView panel 
+        JFrame mainFrame = new JFrame("Main User View");
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setSize(600, 500);  // Set the frame size
+
+        // Add the MainFrameUserView JPanel to the new JFrame
+        views.MainFrameUserView mainPanel = new views.MainFrameUserView();
+        mainFrame.add(mainPanel);
+
+        // Make the JFrame visible
+        mainFrame.setVisible(true);
+                 
+    }//GEN-LAST:event_btnUserLoginActionPerformed
+
+    private void btnAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminLoginActionPerformed
+        // TODO add your handling code here:
+            // Create a new JFrame to hold the MainFrameAdminView panel 
+        JFrame mainFrame = new JFrame("Main Admin View");
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setSize(600, 500);  // Set the frame size
+
+        // Add the MainFrameAdminView JPanel to the new JFrame
+        views.MainFrameAdminView mainPanel = new views.MainFrameAdminView();
+        mainFrame.add(mainPanel);
+
+        // Make the JFrame visible
+        mainFrame.setVisible(true);
+        
+    }//GEN-LAST:event_btnAdminLoginActionPerformed
 
     /**
      * @param args the command line arguments

@@ -4,6 +4,8 @@
  */
 package views;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author eboka
@@ -13,7 +15,7 @@ public class UserPageView extends javax.swing.JPanel {
     /**
      * Creates new form UserPageView
      */
-    public UserPageView() {
+    public UserPageView(JPanel bottomPanel) {
         initComponents();
     }
 
@@ -33,6 +35,8 @@ public class UserPageView extends javax.swing.JPanel {
         txtUserName = new javax.swing.JTextField();
         txtUserPassword = new javax.swing.JTextField();
         btnUserSubmit = new javax.swing.JButton();
+
+        panelUserPageView.setBackground(new java.awt.Color(45, 118, 232));
 
         lblUserLogin.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         lblUserLogin.setText("User Login");

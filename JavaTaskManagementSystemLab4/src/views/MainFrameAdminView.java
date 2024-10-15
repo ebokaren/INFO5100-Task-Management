@@ -4,17 +4,24 @@
  */
 package views;
 
+import java.awt.CardLayout;
+
 /**
  *
  * @author eboka
  */
-public class MainFrameView extends javax.swing.JPanel {
+public class MainFrameAdminView extends javax.swing.JPanel {
 
     /**
      * Creates new form UserPageView
      */
-    public MainFrameView() {
+    public MainFrameAdminView() {
         initComponents();
+        
+       bottomPanel.setLayout(new java.awt.CardLayout());
+        
+       AdminPageView adminPageView = new AdminPageView(this.bottomPanel);
+        bottomPanel.add(adminPageView);
     }
 
     /**
@@ -29,14 +36,26 @@ public class MainFrameView extends javax.swing.JPanel {
         jSplitPane1 = new javax.swing.JSplitPane();
         topPanel = new javax.swing.JPanel();
         btnReturn = new javax.swing.JButton();
-        btnUserDashboard = new javax.swing.JButton();
+        btnAdminDashboard = new javax.swing.JButton();
         bottomPanel = new javax.swing.JPanel();
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        btnReturn.setText("Return");
+        topPanel.setBackground(new java.awt.Color(45, 118, 232));
 
-        btnUserDashboard.setText("Dashboard");
+        btnReturn.setText("Return");
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReturnActionPerformed(evt);
+            }
+        });
+
+        btnAdminDashboard.setText("Dashboard");
+        btnAdminDashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdminDashboardActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout topPanelLayout = new javax.swing.GroupLayout(topPanel);
         topPanel.setLayout(topPanelLayout);
@@ -46,7 +65,7 @@ public class MainFrameView extends javax.swing.JPanel {
                 .addGap(161, 161, 161)
                 .addComponent(btnReturn)
                 .addGap(107, 107, 107)
-                .addComponent(btnUserDashboard)
+                .addComponent(btnAdminDashboard)
                 .addContainerGap(158, Short.MAX_VALUE))
         );
         topPanelLayout.setVerticalGroup(
@@ -55,7 +74,7 @@ public class MainFrameView extends javax.swing.JPanel {
                 .addContainerGap(45, Short.MAX_VALUE)
                 .addGroup(topPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnReturn)
-                    .addComponent(btnUserDashboard))
+                    .addComponent(btnAdminDashboard))
                 .addGap(32, 32, 32))
         );
 
@@ -86,11 +105,30 @@ public class MainFrameView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
+        // TODO add your handling code here:
+                AdminPageView adminPageView = new AdminPageView(bottomPanel);
+                bottomPanel.add(adminPageView);
+                
+                CardLayout cl = (CardLayout) bottomPanel.getLayout();
+                cl.next(bottomPanel);
+    }//GEN-LAST:event_btnReturnActionPerformed
+
+    private void btnAdminDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminDashboardActionPerformed
+        // TODO add your handling code here:
+        
+//                UserDashboard userDashboard = new UserDashboard(bottomPanel);
+//                bottomPanel.add(userDashboard);
+//                
+//                CardLayout cl = (CardLayout) bottomPanel.getLayout();
+//                cl.next(bottomPanel);
+    }//GEN-LAST:event_btnAdminDashboardActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bottomPanel;
+    private javax.swing.JButton btnAdminDashboard;
     private javax.swing.JButton btnReturn;
-    private javax.swing.JButton btnUserDashboard;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JPanel topPanel;
     // End of variables declaration//GEN-END:variables
