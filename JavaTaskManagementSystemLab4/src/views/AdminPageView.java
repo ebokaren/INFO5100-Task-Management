@@ -4,6 +4,8 @@
  */
 package views;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author eboka
@@ -13,7 +15,7 @@ public class AdminPageView extends javax.swing.JPanel {
     /**
      * Creates new form AdminPageView
      */
-    public AdminPageView() {
+    public AdminPageView(JPanel bottomPanel) {
         initComponents();
     }
 
@@ -33,6 +35,10 @@ public class AdminPageView extends javax.swing.JPanel {
         txtAdminName = new javax.swing.JTextField();
         txtAdminPassword = new javax.swing.JTextField();
         btnAdminSubmit = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(102, 102, 255));
+
+        panelAdminPageView.setBackground(new java.awt.Color(45, 118, 232));
 
         lblAdminLogin.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         lblAdminLogin.setText("Admin Login");
