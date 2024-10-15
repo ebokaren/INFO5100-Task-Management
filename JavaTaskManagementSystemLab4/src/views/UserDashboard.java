@@ -16,7 +16,7 @@ public class UserDashboard extends javax.swing.JFrame {
 
     
     /**
-     * Creates new form Home
+     * Creates new form Home.
      */
     public UserDashboard() {
         initComponents();

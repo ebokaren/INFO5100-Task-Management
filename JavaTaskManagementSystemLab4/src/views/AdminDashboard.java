@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 public class AdminDashboard extends javax.swing.JFrame {
 
     /**
-     * Creates new form Home
+     * Creates new form Home.
      */
     public AdminDashboard() {
         initComponents();
