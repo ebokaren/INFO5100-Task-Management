@@ -54,6 +54,11 @@ public class MainFrameUserView extends javax.swing.JPanel {
         });
 
         btnUserDashboard.setText("Dashboard");
+        btnUserDashboard.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnUserDashboardMouseClicked(evt);
+            }
+        });
         btnUserDashboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUserDashboardActionPerformed(evt);
@@ -65,11 +70,11 @@ public class MainFrameUserView extends javax.swing.JPanel {
         topPanelLayout.setHorizontalGroup(
             topPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(topPanelLayout.createSequentialGroup()
-                .addGap(161, 161, 161)
+                .addGap(59, 59, 59)
                 .addComponent(btnReturn)
-                .addGap(107, 107, 107)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 302, Short.MAX_VALUE)
                 .addComponent(btnUserDashboard)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addGap(65, 65, 65))
         );
         topPanelLayout.setVerticalGroup(
             topPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,11 +116,14 @@ public class MainFrameUserView extends javax.swing.JPanel {
     private void btnUserDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserDashboardActionPerformed
         // TODO add your handling code here:
        
-//                UserDashboard userDashboard = new UserDashboard(bottomPanel);
-//                bottomPanel.add(userDashboard);
-//                
-//                CardLayout cl = (CardLayout) bottomPanel.getLayout();
-//                cl.next(bottomPanel);
+                UserDashboardTest userDashboardTest = new UserDashboardTest();
+                bottomPanel.add(userDashboardTest);
+                
+                CardLayout cl = (CardLayout) bottomPanel.getLayout();
+                cl.show(bottomPanel, "UserDashboardTest");
+                cl.next(bottomPanel);
+
+//    new UserDashboard().show();
         
     }//GEN-LAST:event_btnUserDashboardActionPerformed
 
@@ -129,6 +137,11 @@ public class MainFrameUserView extends javax.swing.JPanel {
                 cl.next(bottomPanel);
        
     }//GEN-LAST:event_btnReturnActionPerformed
+
+    private void btnUserDashboardMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUserDashboardMouseClicked
+        // TODO add your handling code here:
+    
+    }//GEN-LAST:event_btnUserDashboardMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

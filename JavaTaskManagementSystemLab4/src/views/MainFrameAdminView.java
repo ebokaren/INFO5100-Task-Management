@@ -62,11 +62,11 @@ public class MainFrameAdminView extends javax.swing.JPanel {
         topPanelLayout.setHorizontalGroup(
             topPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(topPanelLayout.createSequentialGroup()
-                .addGap(161, 161, 161)
+                .addGap(69, 69, 69)
                 .addComponent(btnReturn)
-                .addGap(107, 107, 107)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
                 .addComponent(btnAdminDashboard)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addGap(68, 68, 68))
         );
         topPanelLayout.setVerticalGroup(
             topPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,11 +117,12 @@ public class MainFrameAdminView extends javax.swing.JPanel {
     private void btnAdminDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminDashboardActionPerformed
         // TODO add your handling code here:
         
-//                UserDashboard userDashboard = new UserDashboard(bottomPanel);
-//                bottomPanel.add(userDashboard);
-//                
-//                CardLayout cl = (CardLayout) bottomPanel.getLayout();
-//                cl.next(bottomPanel);
+                AdminDashboardTest adminDashboardTest = new AdminDashboardTest();
+                bottomPanel.add(adminDashboardTest);
+                
+                CardLayout cl = (CardLayout) bottomPanel.getLayout();
+                cl.show(bottomPanel, "AdminDashboardTest");
+                cl.next(bottomPanel);
     }//GEN-LAST:event_btnAdminDashboardActionPerformed
 
 
