@@ -1,27 +1,30 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package views;
 
+import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import models.TaskManagementModel;
-
-
+import java.awt.CardLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 
 /**
  *
- * @author proxc
+ * @author eboka
  */
-public class UserDashboard extends javax.swing.JFrame {
+public class UserDashboard extends javax.swing.JPanel {
 
-    
     /**
-     * Creates new form Home.
+     * Creates new form UserDashboardTest
      */
     public UserDashboard() {
         initComponents();
+        
     }
 
     /**
@@ -52,6 +55,7 @@ public class UserDashboard extends javax.swing.JFrame {
         UserDashboad_Create_Jpanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        createTask = new javax.swing.JButton();
         UserDashboad_Edit_Jpanel = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -61,10 +65,6 @@ public class UserDashboard extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocationByPlatform(true);
-        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(860, 600));
@@ -110,11 +110,7 @@ public class UserDashboard extends javax.swing.JFrame {
         jTextField1.setBorder(null);
         jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 334, 25));
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, 348, -1));
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/navigation.png"))); // NOI18N
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 90, 100));
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/search_20px_1.png"))); // NOI18N
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -145,20 +141,23 @@ public class UserDashboard extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel2)))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 460, 140, 120));
@@ -180,8 +179,6 @@ public class UserDashboard extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(45, 118, 232));
         jLabel3.setText("View");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/home_48px.png"))); // NOI18N
-
         javax.swing.GroupLayout UserDashboad_View_JpanelLayout = new javax.swing.GroupLayout(UserDashboad_View_Jpanel);
         UserDashboad_View_Jpanel.setLayout(UserDashboad_View_JpanelLayout);
         UserDashboad_View_JpanelLayout.setHorizontalGroup(
@@ -191,7 +188,7 @@ public class UserDashboard extends javax.swing.JFrame {
                 .addGroup(UserDashboad_View_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         UserDashboad_View_JpanelLayout.setVerticalGroup(
             UserDashboad_View_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,7 +197,7 @@ public class UserDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         jPanel1.add(UserDashboad_View_Jpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 140, 120));
@@ -222,18 +219,28 @@ public class UserDashboard extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(45, 118, 232));
         jLabel5.setText("Create");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/group_52px.png"))); // NOI18N
+        createTask.setText("User Accessible");
+        createTask.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createTaskActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout UserDashboad_Create_JpanelLayout = new javax.swing.GroupLayout(UserDashboad_Create_Jpanel);
         UserDashboad_Create_Jpanel.setLayout(UserDashboad_Create_JpanelLayout);
         UserDashboad_Create_JpanelLayout.setHorizontalGroup(
             UserDashboad_Create_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UserDashboad_Create_JpanelLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
                 .addGroup(UserDashboad_Create_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addContainerGap(46, Short.MAX_VALUE))
+                    .addGroup(UserDashboad_Create_JpanelLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addGroup(UserDashboad_Create_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)))
+                    .addGroup(UserDashboad_Create_JpanelLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(createTask)))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         UserDashboad_Create_JpanelLayout.setVerticalGroup(
             UserDashboad_Create_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,7 +249,9 @@ public class UserDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(createTask)
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         jPanel1.add(UserDashboad_Create_Jpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 140, 120));
@@ -261,8 +270,6 @@ public class UserDashboard extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(45, 118, 232));
         jLabel7.setText("Edit");
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/classroom_48px.png"))); // NOI18N
-
         javax.swing.GroupLayout UserDashboad_Edit_JpanelLayout = new javax.swing.GroupLayout(UserDashboad_Edit_Jpanel);
         UserDashboad_Edit_Jpanel.setLayout(UserDashboad_Edit_JpanelLayout);
         UserDashboad_Edit_JpanelLayout.setHorizontalGroup(
@@ -272,7 +279,7 @@ public class UserDashboard extends javax.swing.JFrame {
                 .addGroup(UserDashboad_Edit_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel7)
                     .addComponent(jLabel8))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         UserDashboad_Edit_JpanelLayout.setVerticalGroup(
             UserDashboad_Edit_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -281,7 +288,7 @@ public class UserDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         jPanel1.add(UserDashboad_Edit_Jpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 140, 120));
@@ -300,8 +307,6 @@ public class UserDashboard extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(45, 118, 232));
         jLabel9.setText("Delete");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/settings_48px.png"))); // NOI18N
-
         javax.swing.GroupLayout UserDashboad_Delete_JpanelLayout = new javax.swing.GroupLayout(UserDashboad_Delete_Jpanel);
         UserDashboad_Delete_Jpanel.setLayout(UserDashboad_Delete_JpanelLayout);
         UserDashboad_Delete_JpanelLayout.setHorizontalGroup(
@@ -311,7 +316,7 @@ public class UserDashboard extends javax.swing.JFrame {
                 .addGroup(UserDashboad_Delete_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel9)
                     .addComponent(jLabel10))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         UserDashboad_Delete_JpanelLayout.setVerticalGroup(
             UserDashboad_Delete_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -320,7 +325,7 @@ public class UserDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel9)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         jPanel1.add(UserDashboad_Delete_Jpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 140, 120));
@@ -339,33 +344,31 @@ public class UserDashboard extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(45, 118, 232));
         jLabel11.setText("N/A");
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/list_64px.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(38, 38, 38)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel11)
                     .addComponent(jLabel12))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
-                .addComponent(jLabel11)
-                .addGap(29, 29, 29)
+                .addContainerGap(87, Short.MAX_VALUE)
                 .addComponent(jLabel12)
-                .addGap(33, 33, 33))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel11)
+                .addContainerGap())
         );
 
         jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, 140, 120));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -374,14 +377,37 @@ public class UserDashboard extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 589, Short.MAX_VALUE)
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_exitMousePressed
+
+    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+        // TODO add your handling code here:
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        int xx = 0;
+        int xy = 0;
+        this.setLocation(x - xx, y - xy);
+    }//GEN-LAST:event_jPanel2MouseDragged
+
+    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
+        // TODO add your handling code here:
+        int xx = evt.getX();
+        int xy = evt.getY();
+    }//GEN-LAST:event_jPanel2MousePressed
+
+    private void jPanel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseEntered
+        // TODO add your handling code here:
+        setColor(jPanel3);
+    }//GEN-LAST:event_jPanel3MouseEntered
+
+    private void jPanel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseExited
+        // TODO add your handling code here:
+        resetColor(jPanel3);
+    }//GEN-LAST:event_jPanel3MouseExited
 
     private void UserDashboad_View_JpanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserDashboad_View_JpanelMouseEntered
         // TODO add your handling code here:
@@ -392,23 +418,11 @@ public class UserDashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         resetColor(UserDashboad_View_Jpanel);
     }//GEN-LAST:event_UserDashboad_View_JpanelMouseExited
-     
-    
-    
-    
-    int xx,xy;
-    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
-        // TODO add your handling code here:
-        xx = evt.getX();
-        xy = evt.getY();
-    }//GEN-LAST:event_jPanel2MousePressed
 
-    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+    private void UserDashboad_View_JpanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserDashboad_View_JpanelMousePressed
         // TODO add your handling code here:
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x - xx, y - xy);  
-    }//GEN-LAST:event_jPanel2MouseDragged
+        new View_Data().show();
+    }//GEN-LAST:event_UserDashboad_View_JpanelMousePressed
 
     private void UserDashboad_Create_JpanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserDashboad_Create_JpanelMouseEntered
         // TODO add your handling code here:
@@ -419,6 +433,12 @@ public class UserDashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         resetColor(UserDashboad_Create_Jpanel);
     }//GEN-LAST:event_UserDashboad_Create_JpanelMouseExited
+
+    private void UserDashboad_Create_JpanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserDashboad_Create_JpanelMousePressed
+        // TODO add your handling code here:
+        //just a sample.
+        new CreateNewTaskView().show();
+    }//GEN-LAST:event_UserDashboad_Create_JpanelMousePressed
 
     private void UserDashboad_Edit_JpanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserDashboad_Edit_JpanelMouseEntered
         // TODO add your handling code here
@@ -438,7 +458,7 @@ public class UserDashboard extends javax.swing.JFrame {
     private void UserDashboad_Delete_JpanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserDashboad_Delete_JpanelMouseExited
         // TODO add your handling code here:
         resetColor(UserDashboad_Delete_Jpanel);
-        
+
     }//GEN-LAST:event_UserDashboad_Delete_JpanelMouseExited
 
     private void jPanel8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseEntered
@@ -451,138 +471,36 @@ public class UserDashboard extends javax.swing.JFrame {
         resetColor(jPanel8);
     }//GEN-LAST:event_jPanel8MouseExited
 
-    private void jPanel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseEntered
+    private void createTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createTaskActionPerformed
         // TODO add your handling code here:
-        setColor(jPanel3);
-    }//GEN-LAST:event_jPanel3MouseEntered
+                 JFrame createTaskFrame = new JFrame("Create New Task");
+// Assistance gottent from ChatGPT
+   
+    createTaskFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    createTaskFrame.setSize(600, 400); 
+    createTaskFrame.setLayout(new BorderLayout());
 
-    private void jPanel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseExited
-        // TODO add your handling code here:
-        resetColor(jPanel3);
-    }//GEN-LAST:event_jPanel3MouseExited
 
-    private void UserDashboad_View_JpanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserDashboad_View_JpanelMousePressed
-        // TODO add your handling code here:
-        new View_Data().show();
-    }//GEN-LAST:event_UserDashboad_View_JpanelMousePressed
-
-    private void UserDashboad_Create_JpanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserDashboad_Create_JpanelMousePressed
-        // TODO add your handling code here:
-        //just a sample.
-        new CreateNewTaskView().show();
-    }//GEN-LAST:event_UserDashboad_Create_JpanelMousePressed
- public void setColor(JPanel panel)
- {
-     panel.setBackground(new java.awt.Color(197, 197, 197));
- }
+    JPanel createTaskPanel = new CreateNewTaskViewTest();
  
- public void resetColor(JPanel panel)
- {
-     panel.setBackground(new java.awt.Color(240,240,240));
- }
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(UserDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(UserDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(UserDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(UserDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+    createTaskPanel.add(new JLabel("Task Name:"));
+    createTaskPanel.add(new JTextField(15));
+    createTaskFrame.add(createTaskPanel, BorderLayout.CENTER);
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new UserDashboard().setVisible(true);
-            }
-        });
-    }
+    // Make the JFrame visible
+    createTaskFrame.setVisible(true);
+
+    // Optionally, center the frame on the screen
+    createTaskFrame.setLocationRelativeTo(null);
+    }//GEN-LAST:event_createTaskActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel UserDashboad_Create_Jpanel;
     private javax.swing.JPanel UserDashboad_Delete_Jpanel;
     private javax.swing.JPanel UserDashboad_Edit_Jpanel;
     private javax.swing.JPanel UserDashboad_View_Jpanel;
+    private javax.swing.JButton createTask;
     private javax.swing.JLabel exit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -608,4 +526,12 @@ public class UserDashboard extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    private void setColor(JPanel jPanel3) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void resetColor(JPanel jPanel3) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
