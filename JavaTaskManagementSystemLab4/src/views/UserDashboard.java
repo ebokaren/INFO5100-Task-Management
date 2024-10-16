@@ -481,7 +481,7 @@ public class UserDashboard extends javax.swing.JPanel {
     createTaskFrame.setLayout(new BorderLayout());
 
 
-    JPanel createTaskPanel = new CreateNewTaskViewTest();
+    JPanel createTaskPanel = new CreateNewTaskView();
  
     createTaskPanel.add(new JLabel("Task Name:"));
     createTaskPanel.add(new JTextField(15));
