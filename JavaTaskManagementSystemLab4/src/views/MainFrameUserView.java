@@ -126,11 +126,11 @@ public class MainFrameUserView extends javax.swing.JPanel {
 //                 JOptionPane.showMessageDialog(this, "Please Fill in Login Details to Access Dashboard!", "Error", JOptionPane.ERROR_MESSAGE);
 //             try {
 //                 
-                UserDashboardTest userDashboardTest = new UserDashboardTest();
-                bottomPanel.add(userDashboardTest);
+                UserDashboard userDashboard = new UserDashboard();
+                bottomPanel.add(userDashboard);
                 
                 CardLayout cl = (CardLayout) bottomPanel.getLayout();
-                cl.show(bottomPanel, "UserDashboardTest");
+                cl.show(bottomPanel, "UserDashboard");
                 cl.next(bottomPanel);
 
 //             }catch(Exception e){

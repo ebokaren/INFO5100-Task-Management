@@ -117,11 +117,11 @@ public class MainFrameAdminView extends javax.swing.JPanel {
     private void btnAdminDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminDashboardActionPerformed
         // TODO add your handling code here:
         
-                AdminDashboardTest adminDashboardTest = new AdminDashboardTest();
-                bottomPanel.add(adminDashboardTest);
+                AdminDashboard adminDashboard = new AdminDashboard();
+                bottomPanel.add(adminDashboard);
                 
                 CardLayout cl = (CardLayout) bottomPanel.getLayout();
-                cl.show(bottomPanel, "AdminDashboardTest");
+                cl.show(bottomPanel, "AdminDashboard");
                 cl.next(bottomPanel);
     }//GEN-LAST:event_btnAdminDashboardActionPerformed
 
