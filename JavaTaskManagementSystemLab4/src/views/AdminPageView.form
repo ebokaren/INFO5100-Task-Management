@@ -52,9 +52,9 @@
                               <Component id="lblAdminName" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtAdminName" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                              <Component id="txtAdminPassword" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtAdminName" alignment="0" pref="115" max="32767" attributes="0"/>
+                              <Component id="txtAdminPassword" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -105,12 +105,18 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtAdminName">
         </Component>
-        <Component class="javax.swing.JTextField" name="txtAdminPassword">
-        </Component>
         <Component class="javax.swing.JButton" name="btnAdminSubmit">
           <Properties>
             <Property name="text" type="java.lang.String" value="Login"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdminSubmitActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="txtAdminPassword">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAdminPasswordActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

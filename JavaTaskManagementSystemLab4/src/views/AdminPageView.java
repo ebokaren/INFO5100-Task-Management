@@ -4,7 +4,11 @@
  */
 package views;
 
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 import javax.swing.JPanel;
+import models.TaskManagementModel;
 
 /**
  *
@@ -33,8 +37,8 @@ public class AdminPageView extends javax.swing.JPanel {
         lblAdminName = new javax.swing.JLabel();
         lblAdminPassword = new javax.swing.JLabel();
         txtAdminName = new javax.swing.JTextField();
-        txtAdminPassword = new javax.swing.JTextField();
         btnAdminSubmit = new javax.swing.JButton();
+        txtAdminPassword = new javax.swing.JPasswordField();
 
         setBackground(new java.awt.Color(102, 102, 255));
 
@@ -48,6 +52,17 @@ public class AdminPageView extends javax.swing.JPanel {
         lblAdminPassword.setText("Password:");
 
         btnAdminSubmit.setText("Login");
+        btnAdminSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdminSubmitActionPerformed(evt);
+            }
+        });
+
+        txtAdminPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAdminPasswordActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelAdminPageViewLayout = new javax.swing.GroupLayout(panelAdminPageView);
         panelAdminPageView.setLayout(panelAdminPageViewLayout);
@@ -63,9 +78,9 @@ public class AdminPageView extends javax.swing.JPanel {
                             .addComponent(lblAdminPassword)
                             .addComponent(lblAdminName))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panelAdminPageViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtAdminName, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtAdminPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(panelAdminPageViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtAdminName, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                            .addComponent(txtAdminPassword))))
                 .addContainerGap(204, Short.MAX_VALUE))
         );
         panelAdminPageViewLayout.setVerticalGroup(
@@ -98,6 +113,51 @@ public class AdminPageView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnAdminSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminSubmitActionPerformed
+        // TODO add your handling code here:
+//         try {
+//        TaskManagementModel taskManagementModel = new TaskManagementModel();
+//        
+//            String adminName = txtAdminName.getText().trim();
+//            String adminPassword = new String(txtAdminPassword.getPassword()).trim();
+//            
+//        System.out.println("Admin Name: " + adminName);
+//        System.out.println("Admin Password: " + adminPassword);
+//        
+//            if (adminName.isEmpty() || adminPassword.isEmpty()){
+//                 JOptionPane.showMessageDialog(this, "Please Fill in Login Details to Access Dashboard!", "Error", JOptionPane.ERROR_MESSAGE);
+//            }else{
+//            System.out.println("Admin login successful with name: " + adminName);
+//            JOptionPane.showMessageDialog(this, "Welcome Admin", "Successful Login", INFORMATION_MESSAGE);
+//            }
+//             }catch(Exception e){
+//                 System.out.println("Invalid Request");
+                 // JOptionPane.showMessageDialog(this, "Please Fill in Login Details to Access Admin Dashboard!", "Error", JOptionPane.ERROR_MESSAGE);
+                                // }
+                 String adminName = txtAdminName.getText().trim();
+                 String adminPassword = new String(txtAdminPassword.getPassword()).trim();
+
+                if (adminName.isEmpty() || adminPassword.isEmpty()) {
+
+                JOptionPane.showMessageDialog(this, "Please Fill in Login Details to Access Admin Dashboard!", "Error", JOptionPane.ERROR_MESSAGE);
+                } else {
+
+                    System.out.println("Admin login successful with name: " + adminName);
+                    JOptionPane.showMessageDialog(this, "Welcome " + adminName, "Successful Login", JOptionPane.INFORMATION_MESSAGE);
+                    
+                                    }
+//                AdminDashboardTest adminDashboardTest = new AdminDashboardTest();
+//                bottomPanel.add(adminDashboardTest);
+//                
+//                CardLayout cl = (CardLayout) bottomPanel.getLayout();
+//                cl.show(bottomPanel, "AdminDashboardTest");
+//                cl.next(bottomPanel);
+    }//GEN-LAST:event_btnAdminSubmitActionPerformed
+
+    private void txtAdminPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAdminPasswordActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdminSubmit;
@@ -106,6 +166,6 @@ public class AdminPageView extends javax.swing.JPanel {
     private javax.swing.JLabel lblAdminPassword;
     private javax.swing.JPanel panelAdminPageView;
     private javax.swing.JTextField txtAdminName;
-    private javax.swing.JTextField txtAdminPassword;
+    private javax.swing.JPasswordField txtAdminPassword;
     // End of variables declaration//GEN-END:variables
 }

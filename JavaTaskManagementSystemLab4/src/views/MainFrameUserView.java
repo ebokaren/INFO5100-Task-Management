@@ -5,6 +5,8 @@
 package views;
 import java.awt.CardLayout;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import models.TaskManagementModel;
 
 /**
  *
@@ -116,6 +118,14 @@ public class MainFrameUserView extends javax.swing.JPanel {
     private void btnUserDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserDashboardActionPerformed
         // TODO add your handling code here:
        
+//        TaskManagementModel taskManagementModel = new TaskManagementModel();
+//            String userName = txtUserName.getText().trim();
+//            String userPassword = new String(txtPassword.getPassword()).trim();
+//        
+//            if (getuserName.isEmpty() || getuserPassword.isEmpty()){
+//                 JOptionPane.showMessageDialog(this, "Please Fill in Login Details to Access Dashboard!", "Error", JOptionPane.ERROR_MESSAGE);
+//             try {
+//                 
                 UserDashboardTest userDashboardTest = new UserDashboardTest();
                 bottomPanel.add(userDashboardTest);
                 
@@ -123,6 +133,13 @@ public class MainFrameUserView extends javax.swing.JPanel {
                 cl.show(bottomPanel, "UserDashboardTest");
                 cl.next(bottomPanel);
 
+//             }catch(Exception e){
+//                 System.out.println("Invalid Request");
+//            JOptionPane.showMessageDialog(this, "Please Fill in Login Details to Access Dashboard!", "Error", JOptionPane.ERROR_MESSAGE);
+//       
+//             }    
+            
+        
 //    new UserDashboard().show();
         
     }//GEN-LAST:event_btnUserDashboardActionPerformed
