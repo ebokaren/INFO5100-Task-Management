@@ -4,7 +4,9 @@
  */
 package views;
 
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import models.TaskManagementModel;
 
 /**
  *
@@ -33,8 +35,8 @@ public class UserPageView extends javax.swing.JPanel {
         lblUserName = new javax.swing.JLabel();
         lblUserPassword = new javax.swing.JLabel();
         txtUserName = new javax.swing.JTextField();
-        txtUserPassword = new javax.swing.JTextField();
         btnUserSubmit = new javax.swing.JButton();
+        txtUserPassword = new javax.swing.JPasswordField();
 
         panelUserPageView.setBackground(new java.awt.Color(45, 118, 232));
 
@@ -46,6 +48,17 @@ public class UserPageView extends javax.swing.JPanel {
         lblUserPassword.setText("Password:");
 
         btnUserSubmit.setText("Login");
+        btnUserSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUserSubmitActionPerformed(evt);
+            }
+        });
+
+        txtUserPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUserPasswordActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelUserPageViewLayout = new javax.swing.GroupLayout(panelUserPageView);
         panelUserPageView.setLayout(panelUserPageViewLayout);
@@ -63,7 +76,7 @@ public class UserPageView extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panelUserPageViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtUserPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtUserPassword))))
                 .addContainerGap(221, Short.MAX_VALUE))
         );
         panelUserPageViewLayout.setVerticalGroup(
@@ -96,6 +109,27 @@ public class UserPageView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtUserPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUserPasswordActionPerformed
+
+    private void btnUserSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserSubmitActionPerformed
+        // TODO add your handling code here:
+        
+                         String userName = txtUserName.getText().trim();
+                 String userPassword = new String(txtUserPassword.getPassword()).trim();
+
+                if (userName.isEmpty() || userPassword.isEmpty()) {
+
+                JOptionPane.showMessageDialog(this, "Please Fill in Login Details to Access User Dashboard!", "Error", JOptionPane.ERROR_MESSAGE);
+                } else {
+
+                    System.out.println("Admin login successful with name: " + userName);
+                    JOptionPane.showMessageDialog(this, "Welcome " + userName, "Successful Login", JOptionPane.INFORMATION_MESSAGE);
+                    
+                                    }
+    }//GEN-LAST:event_btnUserSubmitActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnUserSubmit;
@@ -104,6 +138,6 @@ public class UserPageView extends javax.swing.JPanel {
     private javax.swing.JLabel lblUserPassword;
     private javax.swing.JPanel panelUserPageView;
     private javax.swing.JTextField txtUserName;
-    private javax.swing.JTextField txtUserPassword;
+    private javax.swing.JPasswordField txtUserPassword;
     // End of variables declaration//GEN-END:variables
 }
